@@ -1,0 +1,51 @@
+---
+title: "Companies and contacts"
+description: "Review fit scores, load saved company results, and reveal a decision maker's work email."
+---
+
+Scouty searches for companies that match the selected campaign, then rates each result against the campaign criteria.
+
+## Review company leads
+
+The table includes company identity, description, location, size, and a fit assessment. A fit score summarizes the available evidence. Read the explanation beside the score before choosing a company; incomplete provider data can affect the rating.
+
+You can:
+
+- select a company to continue;
+- hide a poor result and select **Undo** immediately if it was a mistake;
+- use **Show weak fits** when you want to inspect companies filtered from the default view;
+- select **Show more companies** to reveal more saved rows or load the next available page.
+
+### Automatic campaign snapshots
+
+Scouty saves each successfully loaded company page on the server, including valid cached results and empty pages. The snapshot belongs to that campaign version.
+
+When you reload or return through the existing flow, Scouty reads the snapshot first. **Show more companies** searches only for a page that has not already been saved, up to the current three-page limit. Scouty does not automatically refresh or replace a campaign snapshot.
+
+<Info>
+  To get a different company set, create or select a campaign with different targeting. A new campaign version receives a separate snapshot.
+</Info>
+
+The data timestamp shows when the source result was obtained. Scouty can display an older valid cached result with its age instead of charging for the same provider search again.
+
+## Find decision makers
+
+After choosing a company, Scouty searches for people in this order:
+
+1. roles that match the campaign's selected buyer titles;
+2. related roles when an exact title is unavailable;
+3. other senior people when a likely buyer cannot be found.
+
+Related or fallback contacts are labeled so you can judge whether they are appropriate.
+
+## Reveal a work email
+
+Select **Add** for each person you want to contact. This reveals the person's work email and uses one search credit unless the address was already revealed.
+
+An address must be verified before Scouty can send to it. If an address cannot be verified, Scouty keeps any generated email as a draft and does not send it. Choose another decision maker when the person has left the company, no reachable address exists, or the reveal fails.
+
+Use the remove control to mark an unsuitable person as not a fit. Select **Undo** to restore the most recently removed result.
+
+<Card title="Write and send email" icon="pen-to-square" href="/email/drafts-and-sending">
+  Set up the sender, review AI-generated content, and send safely.
+</Card>

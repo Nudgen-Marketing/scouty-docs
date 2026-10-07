@@ -1,0 +1,74 @@
+---
+title: "Custom domain"
+description: "Send and receive Scouty outreach from a domain your company owns."
+---
+
+A custom domain replaces the hosted sending domain with a domain or subdomain your company controls. Scouty supports one custom domain per account, shared by every project and mailbox in that account.
+
+<Warning>
+  Use a subdomain such as `mail.example.com` when possible. Changing MX records on your main company domain can affect existing email service.
+</Warning>
+
+## Where to manage it
+
+Open **Dashboard → Custom domain** at `/dashboard/settings/custom-domain`. The page is available even if you created projects before adding a domain.
+
+If no custom domain exists, **Write emails** also shows **Custom domain — Optional**. After a domain is added, step 6 shows a short status and **Manage in Dashboard** so the email flow can continue without repeating setup.
+
+## Add a domain
+
+You must be the workspace owner or an admin.
+
+<Steps>
+  <Step title="Check the name">
+    Enter the full domain or subdomain under **Domain or subdomain**, then select **Check domain**.
+  </Step>
+  <Step title="Resolve conflicts">
+    Scouty checks whether the name can be used and warns about existing MX records. If it suggests a safer subdomain, review it before continuing.
+  </Step>
+  <Step title="Add the domain">
+    Select **Add domain** when the result is available.
+  </Step>
+  <Step title="Copy every DNS record">
+    Add each displayed record at your DNS provider. Use the copy buttons for **Name** and **Value** to avoid transcription errors.
+  </Step>
+  <Step title="Check the connection">
+    After saving DNS changes, select **Check connection**. Scouty refreshes sending and receiving verification separately.
+  </Step>
+</Steps>
+
+## Read the DNS table
+
+| Column | Meaning |
+| --- | --- |
+| **Type** | The DNS record type, such as TXT, MX, or CNAME. |
+| **Name** | The host or record name to enter at the DNS provider. Providers may automatically append the zone name. |
+| **Value** | The exact destination or text value. Long values must remain unchanged. |
+| **Proxy status** | For CNAME records, Scouty displays **DNS only** as the required setting. “—” means the setting does not apply. This is configuration guidance, not a live check of your proxy. |
+| **Priority** | The priority supplied for the record. Enter `0` or `10` exactly when shown. “—” means no priority was supplied. |
+| **Status** | The latest verification state returned for that record. |
+
+Cloudflare users should set the displayed CNAME to **DNS only**, not proxied. Other providers may use different wording for the same behavior.
+
+## Wait for DNS propagation
+
+DNS changes can take time to propagate after you save them. Your custom domain becomes ready only after verification completes. Scouty does not promise a fixed completion time or continuously check in the background.
+
+When sending or receiving is not ready, wait and select **Check connection** again. A specific DNS issue remains visible when the verification service reports one.
+
+The two summary states are independent:
+
+- **Sending — Ready** means outgoing mail can use the custom domain.
+- **Receiving — Ready** means replies can arrive through the custom domain.
+
+Do not send new outreach from the custom address until the required status is ready. Scouty rechecks the active mailbox before a send. If the mailbox address changed after you reviewed a draft, review the draft again.
+
+## Delete a domain
+
+Select **Delete domain** and confirm. Project mailboxes return to their hosted Mermail addresses. Sent email, conversation history, and existing message links remain intact.
+
+If a create, verify, or delete request times out, reload the page before retrying. Scouty reads the current domain state so an uncertain response does not become a duplicate domain operation.
+
+<Card title="Email drafts and sending" icon="envelope" href="/email/drafts-and-sending">
+  Return to sender setup, draft review, and delivery states.
+</Card>
