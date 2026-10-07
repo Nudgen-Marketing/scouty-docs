@@ -1,0 +1,67 @@
+---
+title: "Auto follow-up"
+description: "Prepare and approve up to three follow-ups that stop when the conversation changes."
+---
+
+Auto follow-up helps you continue an approved conversation when the recipient has not replied. It is off by default for each project and applies only to opening emails sent after you enable it.
+
+## Enable it for a project
+
+<Steps>
+  <Step title="Open Auto follow-up">
+    Open a project or its draft in **Write emails**. Find **Auto follow-up**.
+  </Step>
+  <Step title="Choose the time zone">
+    Enter the project's IANA time zone, such as `Asia/Ho_Chi_Minh`. Scouty initially suggests the browser time zone.
+  </Step>
+  <Step title="Enable follow-ups">
+    Select **Enable follow-ups** and confirm. Only new opening emails with an explicitly approved sequence can start automatic follow-up.
+  </Step>
+</Steps>
+
+## Draft and approve the sequence
+
+1. Select **Draft 3 follow-ups with AI**.
+2. Review all three messages.
+3. Edit each message as needed, then select **Save follow-ups**.
+4. Select **Approve all 3 follow-ups** and confirm **Approve sequence**.
+5. Send the original opening email.
+
+The sequence starts only after the original email is confirmed as sent. If you send the opening email without an approved sequence, Scouty does not schedule follow-ups for it later.
+
+Editing the original subject or body invalidates the previous approval. Save or regenerate the three messages and approve them again.
+
+## Schedule rules
+
+- Scouty can send at most three follow-ups after the opening email.
+- Each message waits at least 72 hours after the previous confirmed send.
+- Messages send Monday through Friday between 09:00 and 17:00 in the project time zone.
+- A due time outside that window moves to the next valid working time.
+- After downtime, Scouty processes only the next due message. It does not send several missed messages at once.
+
+The conversation displays **0/3** through **3/3 sent**, the next scheduled time, current status, approved content, and a reason when the sequence stops.
+
+## Conditions that stop the sequence
+
+Scouty stops pending follow-ups when it detects any of these conditions:
+
+- any recipient reply, including an out-of-office response;
+- a bounce, complaint, or request to stop contact;
+- a meeting booked for the conversation;
+- a manual email sent in the conversation;
+- the conversation marked handled;
+- auto follow-up turned off for the project;
+- **Stop follow-ups** selected for the sequence;
+- all three follow-ups sent.
+
+Scouty checks the latest conversation and provider state immediately before each automatic send. If it cannot verify the state, it delays or stops rather than assuming there is no reply.
+
+<Warning>
+  A message already submitted to the email provider cannot be recalled. A reply that arrives after that submission cannot cancel the message already in transit.
+</Warning>
+
+## Turn it off or stop one sequence
+
+Select **Turn off follow-ups** to stop all pending sequences in the project. Turning it on again affects only new opening emails and does not restart old sequences.
+
+Select **Stop follow-ups** inside a conversation to stop only that sequence. It does not restart automatically.

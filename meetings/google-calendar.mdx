@@ -1,0 +1,58 @@
+---
+title: "Google Calendar and meetings"
+description: "Connect a calendar, choose automatic booking, and recover from OAuth or scheduling errors."
+---
+
+Scouty uses a project-level Google Calendar connection to check availability, create an event, and add a Google Meet link after an interested prospect proposes a time.
+
+## Connect Google Calendar
+
+After an opening email is confirmed as sent, Scouty opens **Book meetings** and displays “Email sent. Connect Google Calendar to get ready for meetings.”
+
+<Steps>
+  <Step title="Choose automatic booking">
+    Leave **Book meetings automatically when they propose a free time** selected if you want Scouty to create an event when the reply contains a concrete available time. Clear it if you prefer to book manually.
+  </Step>
+  <Step title="Connect">
+    Select **Connect Google Calendar**. You can use any Google account appropriate for this project.
+  </Step>
+  <Step title="Complete Google consent">
+    Approve the requested Calendar connection. Scouty returns to the same project and confirms the current connection with the server.
+  </Step>
+  <Step title="Open the project">
+    After a successful connection, Scouty opens the project Dashboard. If the project was already connected, it can continue directly.
+  </Step>
+</Steps>
+
+Select **Set up later** to open the project without connecting. Replies are still tracked, and you can connect from the project later.
+
+## Automatic booking behavior
+
+When automatic booking is on, Scouty can book a concrete weekday time from a reply if the time is between 07:00 and 21:00 in the connected calendar's time zone and the calendar is free.
+
+If the proposed time is unavailable or the reply does not contain one clear time, Scouty drafts a response with available options for you to review and send. Replies to prospects are never sent automatically by the Calendar feature.
+
+You can change **Auto-book meetings from replies** and **Meeting length** in the connected Calendar card. A booked event appears in the conversation activity. Cancellation and RSVP changes can update the meeting state.
+
+## Book a time manually
+
+Open the conversation and use the booking form when you and the prospect have agreed on a time or the automatic workflow needs help. Confirm the time carefully. Scouty sends a calendar invitation with a meeting link when the booking succeeds.
+
+## Booking link compared with Google Calendar
+
+| Feature | Purpose | What Scouty knows |
+| --- | --- | --- |
+| **Booking link** | An external scheduling page inserted into a new or rewritten opening email. | Scouty stores the URL but does not confirm that an external booking occurred. |
+| **Google Calendar connection** | Checks project availability and creates an event from a reply or manual booking. | Scouty tracks the event and meeting activity. |
+| **Google Meet link** | The join link attached to a Calendar event. | It is created as part of a successful event, not configured as the Booking link. |
+
+## Recover from connection problems
+
+- If you cancel Google consent, return to the Calendar card and select **Connect Google Calendar** again.
+- If Scouty cannot load or verify the latest Calendar state, retry. Do not rely only on a success parameter in the browser address.
+- If the connection remains unavailable, select **Set up later**. You can continue managing email and retry from the project.
+- If the wrong Google account is connected, select **Disconnect**, confirm, then connect the correct account. Existing booked meetings stay on the old calendar.
+
+<Note>
+  Calendar settings belong to one project. Connecting a calendar in one project does not silently change another project's Calendar settings.
+</Note>

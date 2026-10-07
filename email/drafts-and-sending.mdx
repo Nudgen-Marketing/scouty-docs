@@ -1,0 +1,76 @@
+---
+title: "Draft and send email"
+description: "Set up the sender, review AI-generated outreach, add a booking link, and send safely."
+---
+
+Scouty creates one personal opening email for each selected contact. You review the exact subject and message before anything is sent.
+
+## Choose a sending address
+
+In **Write emails**, enter the address name and **Sender name**. Scouty shows the full hosted address before you confirm it. Choose a name that represents your company because the address is reused for its mailbox.
+
+You can also use a company-owned address after setting up a [Custom domain](/settings/custom-domain). One custom domain is shared across the account and all projects.
+
+## Review the draft
+
+The editor shows **From**, **To**, verification state, **Subject**, and **Message**. Check every factual claim, recipient detail, link, and call to action.
+
+To edit directly:
+
+1. Change the subject or message.
+2. Select **Save changes**.
+3. Use **Discard** if you want to restore the last saved version.
+
+To use AI, enter a precise instruction under **Rewrite with AI**, then select **Rewrite**. Save or discard manual changes first. A rewrite starts from the saved draft and remains editable.
+
+If personalization fails, Scouty keeps a starting version and displays the AI error. Edit that version yourself or retry **Rewrite**. Nothing is sent because generation failed.
+
+## Add a booking link
+
+A Booking link is an optional HTTPS scheduling page for one project, such as a Google Appointment Schedule or Calendly page.
+
+<Steps>
+  <Step title="Open Booking link">
+    Select **Booking link** in the draft editor or project menu.
+  </Step>
+  <Step title="Save a scheduling URL">
+    Enter the full HTTPS scheduling URL and select **Save booking link**.
+  </Step>
+  <Step title="Generate or rewrite an opening email">
+    Scouty adds a short invitation using the configured URL before the signature. The configured URL is inserted exactly once.
+  </Step>
+  <Step title="Review the result">
+    You can edit or remove the invitation from the draft. Scouty does not insert it again when you send.
+  </Step>
+</Steps>
+
+Changing or clearing the project link affects future opening drafts and AI rewrites. Existing drafts, sent email, replies, and automatic follow-ups remain unchanged until you explicitly rewrite or edit them.
+
+<Note>
+  A Booking link lets the recipient choose a time on an external scheduling page. It is different from the Google Meet join link created when Scouty books a Calendar event.
+</Note>
+
+## Send the email
+
+The contact must have a verified address. Save all edits and finish any follow-up changes before sending.
+
+Select **Send email**, review the recipient and subject, then select **Send now**. The message cannot be edited or recalled after it is submitted.
+
+Scouty prevents repeated clicks and retries from intentionally sending the same draft twice.
+
+## Understand send status
+
+| State | Meaning | What to do |
+| --- | --- | --- |
+| **Draft** | The message is saved but has not been submitted. | Continue editing or send it. |
+| **Sending** | The provider request is still in progress. | Keep the page open when possible. Do not create a replacement send. |
+| **Confirming your email went out…** | The result is unknown because confirmation took too long. | Select **Check now**. Scouty reconciles the mailbox instead of guessing or sending again. |
+| **Sent** | The mailbox confirmed the send. | Continue to Calendar setup or open the project. |
+| **Delivered** | The provider reported delivery. | Wait for a reply and monitor the conversation. |
+| **Bounced** or **Not delivered** | The provider could not deliver it. | Stop using that address and choose another decision maker. |
+
+After a confirmed send, Scouty opens **Book meetings** automatically for a newly completed flow. If you later return to **Send emails** from the stepper, use **Next step: 8** to continue.
+
+<Card title="Manage conversations" icon="inbox" href="/email/conversations">
+  Track replies, delivery, manual responses, and project activity.
+</Card>
