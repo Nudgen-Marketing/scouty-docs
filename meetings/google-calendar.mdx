@@ -1,6 +1,6 @@
 ---
 title: "Google Calendar and meetings"
-description: "Connect a calendar, choose automatic booking, and recover from OAuth or scheduling errors."
+description: "Connect a calendar, choose automatic booking, and recover from connection or scheduling errors."
 ---
 
 Scouty uses a project-level Google Calendar connection to check availability, create an event, and add a Google Meet link after an interested prospect proposes a time.
@@ -16,8 +16,8 @@ After an opening email is confirmed as sent, Scouty opens **Book meetings** and 
   <Step title="Connect">
     Select **Connect Google Calendar**. You can use any Google account appropriate for this project.
   </Step>
-  <Step title="Complete Google consent">
-    Approve the requested Calendar connection. Scouty returns to the same project and confirms the current connection with the server.
+  <Step title="Approve the Google connection">
+    Choose the Google account and approve the requested Calendar access. Scouty returns you to the same project.
   </Step>
   <Step title="Open the project">
     After a successful connection, Scouty opens the project Dashboard. If the project was already connected, it can continue directly.
@@ -42,14 +42,14 @@ Open the conversation and use the booking form when you and the prospect have ag
 
 | Feature | Purpose | What Scouty knows |
 | --- | --- | --- |
-| **Booking link** | An external scheduling page inserted into a new or rewritten opening email. | Scouty stores the URL but does not confirm that an external booking occurred. |
+| **Booking link** | An external scheduling page inserted into a new or rewritten opening email. | A booking made outside Scouty does not automatically update the project. |
 | **Google Calendar connection** | Checks project availability and creates an event from a reply or manual booking. | Scouty tracks the event and meeting activity. |
 | **Google Meet link** | The join link attached to a Calendar event. | It is created as part of a successful event, not configured as the Booking link. |
 
 ## Recover from connection problems
 
-- If you cancel Google consent, return to the Calendar card and select **Connect Google Calendar** again.
-- If Scouty cannot load or verify the latest Calendar state, retry. Do not rely only on a success parameter in the browser address.
+- If you cancel the Google connection, return to the Calendar card and select **Connect Google Calendar** again.
+- If Scouty cannot load the Calendar status, wait and retry.
 - If the connection remains unavailable, select **Set up later**. You can continue managing email and retry from the project.
 - If the wrong Google account is connected, select **Disconnect**, confirm, then connect the correct account. Existing booked meetings stay on the old calendar.
 

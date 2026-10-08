@@ -9,21 +9,20 @@ You can explore one company before creating an account. Sign in to research othe
 
 The website and business-form paths share one anonymous trial.
 
-- A successful saved company profile uses the trial. A validation, research, AI, or database error does not.
+- A successfully completed company profile uses the trial. An error does not.
 - You can reload, edit, and continue the same trial profile.
 - Starting a different company opens the sign-in dialog.
-- The browser cookie is the source of truth. Local browser storage only helps Scouty restore the interface quickly.
 - Closing the sign-in dialog keeps the existing profile available but cancels the pending request for a new company.
 
 <Note>
-  The trial is tied to the browser identity. Private windows, another browser, another device, or cleared site data are separate browser contexts.
+  The trial is remembered in the browser you used. A private window, another browser, another device, or cleared browser data may be treated separately.
 </Note>
 
 ## Sign in and verify your account
 
 Sign in from the prompt or the account menu. When you create an account, open the verification message if Scouty asks you to verify your email. Return to Scouty and use the available check action after completing verification.
 
-After a successful sign-in, Scouty resumes a pending research request once. It does not deliberately repeat the website or AI work for the same saved result.
+After a successful sign-in, Scouty continues the research request you started.
 
 ## Projects
 
@@ -42,9 +41,9 @@ Deleting a project removes its research and unsent drafts. A project with sent e
 
 ## Progress recovery
 
-Scouty restores the furthest valid step from saved server data and a browser snapshot. If you revisit an earlier completed step, **Next step: N** moves one step forward without rerunning paid work.
+Scouty saves your progress automatically so you can continue where you left off. If you revisit an earlier completed step, **Next step: N** moves one step forward without repeating completed work.
 
-Changing an upstream profile or targeting input invalidates later dependent results. Saved projects and sent email history remain on the Dashboard.
+Changing your company profile or targeting clears later results that no longer match. Review the updated flow from that point. Saved projects and sent email history remain on the Dashboard.
 
 <Warning>
   Do not use **Research a different company** unless you want to clear the current in-progress research and selections after step 1.

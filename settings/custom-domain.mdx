@@ -3,7 +3,7 @@ title: "Custom domain"
 description: "Send and receive Scouty outreach from a domain your company owns."
 ---
 
-A custom domain replaces the hosted sending domain with a domain or subdomain your company controls. Scouty supports one custom domain per account, shared by every project and mailbox in that account.
+A custom domain lets you send and receive Scouty outreach from a domain or subdomain your company controls. Scouty supports one custom domain per account, shared by every project in that account.
 
 <Warning>
   Use a subdomain such as `mail.example.com` when possible. Changing MX records on your main company domain can affect existing email service.
@@ -33,7 +33,7 @@ You must be the workspace owner or an admin.
     Add each displayed record at your DNS provider. Use the copy buttons for **Name** and **Value** to avoid transcription errors.
   </Step>
   <Step title="Check the connection">
-    After saving DNS changes, select **Check connection**. Scouty refreshes sending and receiving verification separately.
+    After saving DNS changes, select **Check connection**. Scouty checks sending and receiving separately.
   </Step>
 </Steps>
 
@@ -44,30 +44,30 @@ You must be the workspace owner or an admin.
 | **Type** | The DNS record type, such as TXT, MX, or CNAME. |
 | **Name** | The host or record name to enter at the DNS provider. Providers may automatically append the zone name. |
 | **Value** | The exact destination or text value. Long values must remain unchanged. |
-| **Proxy status** | For CNAME records, Scouty displays **DNS only** as the required setting. “—” means the setting does not apply. This is configuration guidance, not a live check of your proxy. |
-| **Priority** | The priority supplied for the record. Enter `0` or `10` exactly when shown. “—” means no priority was supplied. |
-| **Status** | The latest verification state returned for that record. |
+| **Proxy status** | For CNAME records, choose **DNS only**. “—” means no proxy setting is needed. |
+| **Priority** | Enter the number shown, including `0` or `10`. “—” means no priority is needed. |
+| **Status** | Shows whether the record is ready or still pending. |
 
 Cloudflare users should set the displayed CNAME to **DNS only**, not proxied. Other providers may use different wording for the same behavior.
 
 ## Wait for DNS propagation
 
-DNS changes can take time to propagate after you save them. Your custom domain becomes ready only after verification completes. Scouty does not promise a fixed completion time or continuously check in the background.
+DNS changes can take time to appear after you save them. Your custom domain is ready when both sending and receiving show **Ready**.
 
-When sending or receiving is not ready, wait and select **Check connection** again. A specific DNS issue remains visible when the verification service reports one.
+When either status is waiting, check the record values, wait, then select **Check connection** again. If Scouty shows a specific issue, correct that record before retrying. Ask the person who manages your domain for help if you cannot change DNS settings.
 
 The two summary states are independent:
 
 - **Sending — Ready** means outgoing mail can use the custom domain.
 - **Receiving — Ready** means replies can arrive through the custom domain.
 
-Do not send new outreach from the custom address until the required status is ready. Scouty rechecks the active mailbox before a send. If the mailbox address changed after you reviewed a draft, review the draft again.
+Do not send new outreach from the custom address until the required status is ready. If the sending address changes after you reviewed a draft, review the draft again.
 
 ## Delete a domain
 
-Select **Delete domain** and confirm. Project mailboxes return to their hosted Mermail addresses. Sent email, conversation history, and existing message links remain intact.
+Select **Delete domain** and confirm. Project sending addresses return to their hosted Mermail addresses. Sent email, conversation history, and existing message links remain intact.
 
-If a create, verify, or delete request times out, reload the page before retrying. Scouty reads the current domain state so an uncertain response does not become a duplicate domain operation.
+If adding, checking, or deleting a domain takes too long, reload the page and review the current status before trying again.
 
 <Card title="Email drafts and sending" icon="envelope" href="/email/drafts-and-sending">
   Return to sender setup, draft review, and delivery states.
