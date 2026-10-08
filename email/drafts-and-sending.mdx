@@ -27,14 +27,14 @@ If personalization fails, Scouty keeps a starting version and displays the AI er
 
 ## Add a booking link
 
-A Booking link is an optional HTTPS scheduling page for one project, such as a Google Appointment Schedule or Calendly page.
+A Booking link is an optional secure scheduling page for one project, such as a Google Appointment Schedule or Calendly page.
 
 <Steps>
   <Step title="Open Booking link">
     Select **Booking link** in the draft editor or project menu.
   </Step>
   <Step title="Save a scheduling URL">
-    Enter the full HTTPS scheduling URL and select **Save booking link**.
+    Enter the full scheduling link beginning with `https://`, then select **Save booking link**.
   </Step>
   <Step title="Generate or rewrite an opening email">
     Scouty adds a short invitation using the configured URL before the signature. The configured URL is inserted exactly once.
@@ -56,18 +56,18 @@ The contact must have a verified address. Save all edits and finish any follow-u
 
 Select **Send email**, review the recipient and subject, then select **Send now**. The message cannot be edited or recalled after it is submitted.
 
-Scouty prevents repeated clicks and retries from intentionally sending the same draft twice.
+While Scouty is sending or checking the result, wait for the status to update instead of sending the same message again.
 
 ## Understand send status
 
 | State | Meaning | What to do |
 | --- | --- | --- |
 | **Draft** | The message is saved but has not been submitted. | Continue editing or send it. |
-| **Sending** | The provider request is still in progress. | Keep the page open when possible. Do not create a replacement send. |
-| **Confirming your email went out…** | The result is unknown because confirmation took too long. | Select **Check now**. Scouty reconciles the mailbox instead of guessing or sending again. |
-| **Sent** | The mailbox confirmed the send. | Continue to Calendar setup or open the project. |
-| **Delivered** | The provider reported delivery. | Wait for a reply and monitor the conversation. |
-| **Bounced** or **Not delivered** | The provider could not deliver it. | Stop using that address and choose another decision maker. |
+| **Sending** | The email is still being sent. | Keep the page open when possible and do not send a replacement. |
+| **Confirming your email went out…** | Scouty has not confirmed the result yet. | Select **Check now** and wait for the status to update. Do not send it again. |
+| **Sent** | The send is confirmed. | Continue to Calendar setup or open the project. |
+| **Delivered** | The email reached the recipient's mail service. | Wait for a reply and monitor the conversation. |
+| **Bounced** or **Not delivered** | The email could not be delivered. | Stop using that address and choose another decision maker. |
 
 After a confirmed send, Scouty opens **Book meetings** automatically for a newly completed flow. If you later return to **Send emails** from the stepper, use **Next step: 8** to continue.
 

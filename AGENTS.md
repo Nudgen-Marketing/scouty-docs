@@ -22,14 +22,17 @@
 - Explain the purpose, prerequisites, steps, expected result, and recovery path for each workflow.
 - Prefer numbered steps for actions and tables for state definitions.
 - Add links to related pages when a task continues elsewhere.
+- Focus on the business outcome and the action the user takes.
+- Explain a technical term only when the user needs it to complete a task, such as entering DNS records for a custom domain.
 
 ## Content boundaries
 
+- Do not describe servers, databases, cookies, browser storage, caches, snapshots, provider requests, concurrency controls, or implementation architecture in end-user pages.
 - Do not publish secrets, infrastructure configuration, internal endpoints, database details, or migration instructions.
 - Do not promise fixed production quotas unless the configured entitlement has been verified.
 - Do not invent a support email or support channel.
 - Do not document features that are absent from the current application.
-- Do not document removed **Save to project** or **Saved leads** controls. Lead snapshots are automatic.
+- Do not document removed **Save to project** or **Saved leads** controls. Say that company results are saved automatically.
 
 ## Validation
 

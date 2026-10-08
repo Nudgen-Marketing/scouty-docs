@@ -24,5 +24,5 @@
   "navbar": {
     "primary": { "type": "button", "label": "Open Scouty", "href": "https://scouty.to/" }
   },
-  "contextual": { "options": ["copy", "view", "chatgpt", "claude", "perplexity", "cursor", "vscode"] }
+  "contextual": { "options": ["copy", "view"] }
 }

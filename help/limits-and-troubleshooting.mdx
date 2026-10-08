@@ -1,78 +1,70 @@
 ---
 title: "Limits and troubleshooting"
-description: "Understand usage limits, cached results, progress recovery, and common error states."
+description: "Understand usage limits, saved results, progress recovery, and common error states."
 ---
 
-Scouty applies internal limits to provider search, AI generation, and email activity. These controls protect account and application capacity. The exact allowance can depend on the active production configuration, so the documentation does not treat a code default as a purchased entitlement.
+Scouty limits some searches, AI actions, and email activity to keep the service reliable. The allowance can vary, so use the remaining limit shown in the app as the current value.
 
 ## Search limits
 
-Search actions include match previews, company pages, decision makers, and work email reveal. Valid cached or snapshotted results can avoid a new provider request.
+Actions such as **Check matches**, finding companies, finding decision makers, and revealing work email can use your search allowance.
 
-If Scouty reports that today's search limit was reached, new provider-backed searches pause until the reset. The search day resets at **00:00 UTC**.
+If Scouty says that today's search limit was reached, wait for the reset before starting another search. You can continue reviewing results that are already saved.
 
-To convert the reset:
+The search day resets at **00:00 UTC**. Convert that time to your location. For example, it resets at 07:00 in Vietnam because Vietnam is UTC+7. Remember that the local reset time can change in countries that use daylight saving time.
 
-1. Find your current UTC offset.
-2. Add the offset to 00:00 UTC.
-3. Account for daylight-saving changes in regions that use them.
+## Saved results
 
-Examples: Vietnam resets at 07:00 local time (UTC+7). A UTC-4 location resets at 20:00 on the previous local calendar day.
+Scouty saves your progress and company results automatically. You can reload the page or return later to continue where you left off.
 
-## Cache and snapshot behavior
-
-Scouty caches eligible research to reduce repeated provider and AI work. It also saves each company-lead page automatically for its campaign version.
-
-- Reloading a saved page does not intentionally repeat the provider search.
-- An empty page is saved so **Show more companies** does not repeatedly request it.
-- Duplicate company domains across pages are collapsed while preserving first-seen order.
-- A changed campaign version receives a separate snapshot.
-- Scouty shows the source timestamp or stale-data note when an older valid cache is used.
-- If the database cannot confirm a snapshot, Scouty returns an error rather than treating the failure as a cache miss and charging for a new search.
+- **Show more companies** adds the next available group, up to three groups per campaign.
+- The result date tells you when the company information was found.
+- After changing targeting, review the match count and results again.
+- To find a different set of companies, create or select a campaign with different targeting.
 
 ## Common problems
 
 ### “You've reached today's search limit”
 
-Wait until 00:00 UTC, then retry. Continue reviewing results that are already saved. Repeatedly pressing **Check matches** does not bypass the allowance.
+Wait until 00:00 UTC, then retry. Continue reviewing saved results. Repeatedly selecting **Check matches** does not bypass the limit.
 
 ### Company research fails
 
-Check the website spelling and make sure the public site is reachable. Retry the step. Use the business form when no public website exists. A failed analysis does not consume the anonymous profile trial.
+Check the website spelling and make sure the public website opens. Retry the step. Use the business form when no public website exists. A failed attempt does not use the anonymous company trial.
 
 ### Market must be selected
 
-Open **Not quite right? Edit the details**, select a specific market or **Global**, and save. Scouty requires this context before competitor research.
+Select **Not quite right? Edit the details**, choose a specific market or **Global**, and save. Scouty needs this information before it can find relevant competitors.
 
-### A step disappeared after editing
+### A later step disappeared after editing
 
-Changing the company profile, campaign, or targeting invalidates dependent later results. Continue forward from the changed step. Sent email and saved project history are not rewritten.
+Changes to the company profile, campaign, or targeting can clear later results that no longer match. Continue from the step you changed. Sent email and saved project history remain available.
 
 ### Work email cannot be revealed or verified
 
-Choose another decision maker. Scouty will not send to an unverified address.
+Choose another decision maker. Scouty does not send to an unverified address.
 
-### Send is still being confirmed
+### Email sending is not confirmed
 
-Select **Check now**. Do not create another draft for the same send. Scouty reconciles the mailbox because retrying an uncertain send could create a duplicate.
+Select **Check now** and wait for the status to update. Do not send the same email again while Scouty is checking it.
 
 ### Replies are not current
 
-Open the project and select **Check for replies**. If synchronization returns an error, wait and retry without sending another opening email.
+Open the project and select **Check for replies**. If the check fails, wait and retry. Do not send another opening email to refresh the conversation.
 
-### Calendar connection failed or was canceled
+### Google Calendar connection failed or was canceled
 
-Retry **Connect Google Calendar** from the project. Use **Set up later** when you need to continue without Calendar. See [Google Calendar and meetings](/meetings/google-calendar#recover-from-connection-problems).
+Select **Connect Google Calendar** again from the project. Use **Set up later** when you need to continue without Calendar. See [Google Calendar and meetings](/meetings/google-calendar#recover-from-connection-problems).
 
 ### Custom domain remains pending
 
-Compare every DNS name, value, type, proxy setting, and priority with the table. Wait for propagation, then select **Check connection**. See [Custom domain](/settings/custom-domain#wait-for-dns-propagation).
+Compare every DNS **Type**, **Name**, **Value**, **Proxy status**, and **Priority** with the table. Wait for the changes to appear, then select **Check connection**. Ask the person who manages your domain for help if needed. See [Custom domain](/settings/custom-domain#wait-for-dns-propagation).
 
-## Restore your progress
+## Continue where you left off
 
-Reload the current URL first. Scouty restores valid server data and the browser snapshot. Use the stepper to review an already reached step and **Next step: N** to move forward without rerunning it.
+Reload the current page first. Scouty restores completed work when it is available. Use the stepper to review an earlier step and **Next step: N** to move forward without repeating completed work.
 
-If you changed account, company, campaign, or input while a request was running, Scouty ignores a late response that belongs to the old context. Run the action again in the current context.
+If you changed the account, company, campaign, or input while an action was running, run the action again for the item currently shown.
 
 ## Information to collect for support
 
@@ -83,6 +75,6 @@ Use the support channel provided with your Scouty account. Include:
 - the approximate time and your time zone;
 - the visible error text and status;
 - whether retrying or reloading changed the result;
-- a screenshot with personal data and credentials removed.
+- a screenshot with personal information hidden.
 
-Never share passwords, API keys, Firebase tokens, DNS account credentials, or private authentication links.
+Never share passwords, access keys, account credentials, or private sign-in links.

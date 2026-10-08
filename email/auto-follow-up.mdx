@@ -12,7 +12,7 @@ Auto follow-up helps you continue an approved conversation when the recipient ha
     Open a project or its draft in **Write emails**. Find **Auto follow-up**.
   </Step>
   <Step title="Choose the time zone">
-    Enter the project's IANA time zone, such as `Asia/Ho_Chi_Minh`. Scouty initially suggests the browser time zone.
+    Choose the project time zone, such as `Asia/Ho_Chi_Minh`. Scouty initially suggests your current time zone.
   </Step>
   <Step title="Enable follow-ups">
     Select **Enable follow-ups** and confirm. Only new opening emails with an explicitly approved sequence can start automatic follow-up.
@@ -37,7 +37,7 @@ Editing the original subject or body invalidates the previous approval. Save or 
 - Each message waits at least 72 hours after the previous confirmed send.
 - Messages send Monday through Friday between 09:00 and 17:00 in the project time zone.
 - A due time outside that window moves to the next valid working time.
-- After downtime, Scouty processes only the next due message. It does not send several missed messages at once.
+- If sending was unavailable at the scheduled time, Scouty does not send several missed messages at once.
 
 The conversation displays **0/3** through **3/3 sent**, the next scheduled time, current status, approved content, and a reason when the sequence stops.
 
@@ -54,10 +54,10 @@ Scouty stops pending follow-ups when it detects any of these conditions:
 - **Stop follow-ups** selected for the sequence;
 - all three follow-ups sent.
 
-Scouty checks the latest conversation and provider state immediately before each automatic send. If it cannot verify the state, it delays or stops rather than assuming there is no reply.
+If Scouty cannot confirm that it is safe to continue, it delays or stops the sequence and shows the reason in the conversation.
 
 <Warning>
-  A message already submitted to the email provider cannot be recalled. A reply that arrives after that submission cannot cancel the message already in transit.
+  A message that is already being sent cannot be recalled. A reply that arrives after sending begins cannot cancel that message.
 </Warning>
 
 ## Turn it off or stop one sequence
