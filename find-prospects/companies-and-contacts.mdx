@@ -1,51 +1,40 @@
 ---
 title: "Companies and contacts"
-description: "Review fit scores, load saved company results, and reveal a decision maker's work email."
+description: "Browse company pages, review role matches, and choose contacts for email drafts."
 ---
 
-Scouty searches for companies that match the selected campaign, then rates each result against the campaign criteria.
+After confirming targeting and selecting **Find contacts**, use **Companies**, **Contacts**, and **Write emails** to review results. Contact research can continue while you review a draft.
 
-## Review company leads
+## Browse companies
 
-The table includes company identity, description, location, size, and a fit assessment. A fit score summarizes why the company may match your campaign. Read the explanation beside the score before choosing a company because some profiles may have limited information.
+The table shows company identity, domain, why it matches, discovered people, and research status. Review the available evidence before contacting a company.
 
-You can:
+Use **Previous** and **Next** below the table. A display page holds up to 100 companies. Moving to an already loaded page reuses its results. **Next** loads more results only when needed; Scouty does not load every company in advance.
 
-- select a company to continue;
-- hide a poor result and select **Undo** immediately if it was a mistake;
-- use **Show weak fits** when you want to inspect companies filtered from the default view;
-- select **Show more companies** to reveal more saved rows or load the next available page.
+**More available** means another source page may be loaded. Once all available results are loaded, **Page X of Y** reflects the actual list. Provider matches are not a guaranteed number of companies or pages: duplicates and unsuitable results may be excluded. Up to three source pages can be loaded for one campaign.
 
-### Saved company results
+A source page may add fewer companies than expected or no new companies. The current table remains available. If loading fails, use the retry action shown; existing company, contact, and draft results remain available.
 
-Scouty saves company results automatically as you load them. Reload the page or return to the campaign to continue with the same list.
+## Review contacts
 
-Select **Show more companies** to reveal more saved results or find the next group. You can load up to three groups for one campaign.
+Scouty keeps up to ten discovered contacts per company and labels their role match:
 
-<Info>
-  To find a different set of companies, create or select a campaign with different targeting.
-</Info>
+| Label | Meaning |
+| --- | --- |
+| **Target role** | Matches the campaign's intended buyer roles. |
+| **Related role** | A related role that may be relevant. |
+| **Other role** | Review the person yourself before choosing them. |
 
-The data timestamp shows when the results were found. If Scouty displays an older saved result, review the date before contacting the company.
+Scouty automatically selects up to five contacts across the campaign, choosing the best available target or related match at each company. It does not automatically select every person with an available email. You can select **Draft email** for additional contacts, including another person at the same company or someone labeled **Other role**.
 
-## Find decision makers
+**Available** means the source reports an email may be available. Scouty must find a usable address before preparing the email. Revealing an address can use your search allowance.
 
-After choosing a company, Scouty searches for people in this order:
+## Follow progress
 
-1. roles that match the campaign's selected buyer titles;
-2. related roles when an exact title is unavailable;
-3. other senior people when a likely buyer cannot be found.
+A selected contact can show **Queued**, **Finding email**, **Writing queued**, **Preview ready**, or **Draft ready**. If there is no usable address or the person has left the company, choose another contact. Use **Retry** for a failed item when offered. A quota pause shows when you can continue.
 
-Related or fallback contacts are labeled so you can judge whether they are appropriate.
+New results do not replace the email you are reviewing. Review each message before sending. An unverified address cannot be sent to.
 
-## Reveal a work email
+Company results are saved as you load them. Open the same saved campaign to continue with valid results. For a different audience, create or select another campaign and review its targeting.
 
-Select **Add** for each person you want to contact. This reveals the person's work email and uses one search credit unless the address was already revealed.
-
-An address must be verified before Scouty can send to it. If an address cannot be verified, Scouty keeps any generated email as a draft and does not send it. Choose another decision maker when the person has left the company, no reachable address exists, or the reveal fails.
-
-Use the remove control to mark an unsuitable person as not a fit. Select **Undo** to restore the most recently removed result.
-
-<Card title="Write and send email" icon="pen-to-square" href="/email/drafts-and-sending">
-  Set up the sender, review AI-generated content, and send safely.
-</Card>
+Continue with [drafts and sending](/email/drafts-and-sending).
