@@ -9,7 +9,7 @@
     "pages": [
       { "group": "Get started", "pages": ["index", "quickstart", "getting-started/accounts-and-projects"] },
       { "group": "Find prospects", "pages": ["find-prospects/research-your-company", "find-prospects/campaigns-and-targeting", "find-prospects/companies-and-contacts"] },
-      { "group": "Send and manage email", "pages": ["email/drafts-and-sending", "email/conversations", "email/auto-follow-up"] },
+      { "group": "Send and manage email", "pages": ["email/drafts-and-sending", "email/conversations", "email/auto-follow-up", "email/analytics"] },
       { "group": "Meetings", "pages": ["meetings/google-calendar"] },
       { "group": "Custom domain", "pages": ["settings/custom-domain"] },
       { "group": "Limits and troubleshooting", "pages": ["help/limits-and-troubleshooting"] }

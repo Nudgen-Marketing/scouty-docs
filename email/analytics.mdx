@@ -1,0 +1,49 @@
+---
+title: Email analytics
+description: See delivery results and estimated engagement without confusing an open with a reply.
+---
+
+Use **Email analytics** to understand what happened after you sent an email and decide where to focus your outreach.
+
+## Open your report
+
+1. Open **Email analytics** in the Dashboard sidebar, or **View email analytics** from a project.
+2. Choose a **Project**, **Email type**, and **Sent in** period. The default is the last 30 days.
+3. Open an email to see its recipients and recorded activity. Use **Load more activity** for older entries.
+
+Opening emails, follow-ups, replies, private forwards, and private replies are shown separately. The chart groups sends by UTC date. Activity times use your device's time zone.
+
+## Understand the numbers
+
+| Metric | What it means |
+| --- | --- |
+| **Sent** | Sending has been confirmed. Emails still sending or awaiting confirmation are not included. |
+| **Delivered** | Delivery was confirmed for at least one recipient. This does not confirm delivery to every To/Cc address. |
+| **Opened (estimated)** | An image load was classified as likely human activity. It does not prove the message was read. |
+| **Clicked (estimated)** | A link visit was classified as likely human activity. It does not prove interest or identify the person. |
+| **Soft bounce** | A temporary delivery problem was reported. The email may later be delivered. |
+| **Hard bounce** | A permanent delivery failure was reported. |
+
+Counts are per email, not per recipient. An email can appear in both **Soft bounce** and **Delivered**. A bounce without enough information stays unclassified; it is not assumed to be a hard bounce.
+
+**Open rate** uses delivered emails that can record opens. **Click rate** uses delivered emails with tracked links. A dash means there are no eligible emails to calculate the rate.
+
+<Info>
+**No open recorded** does not mean “unread.” Some email apps block images, protect activity, or open content automatically. Security tools can also visit links. Scouty excludes recognized automated activity and uncertain signals from estimated opens and clicks, but cannot identify every automated visit.
+</Info>
+
+## Tracking happens automatically
+
+New opening emails, follow-ups, replies, and forwards include tracking automatically. There is no setting to enable. You still review and approve the message before sending.
+
+Emails sent before tracking was available show **Not tracked**. Scouty does not reconstruct their earlier activity. Plain-text emails can record link clicks but not opens. Unsubscribe links and other excluded links are not tracked.
+
+Activity may come from any To/Cc recipient or someone they forwarded the email to. An open or click does not mark a prospect as replied, stop follow-ups, or book a meeting.
+
+## When results are incomplete
+
+Check the report's update time. If you see **Some results are still updating**, wait and return to the report. Missing information is not proof of no activity. If the report cannot load, choose **Try again**. Do not resend an email to obtain tracking results.
+
+Detailed activity is available for 90 days. Summary results are retained for 12 months. Links in sent emails continue to open their destinations after activity expires.
+
+See [sending status](/email/drafts-and-sending), [conversations](/email/conversations), and [follow-up rules](/email/auto-follow-up).
