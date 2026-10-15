@@ -7,7 +7,7 @@ Use **Email analytics** to understand what happened after you sent an email and 
 
 ## Open your report
 
-1. Open **Email analytics** in the Dashboard sidebar, or **View email analytics** from a project.
+1. Open **Email analytics** in the Dashboard sidebar.
 2. Choose a **Project**, **Email type**, and **Sent in** period. The default is the last 30 days.
 3. Open an email to see its recipients and recorded activity. Use **Load more activity** for older entries.
 
@@ -32,9 +32,15 @@ Counts are per email, not per recipient. An email can appear in both **Soft boun
 **No open recorded** does not mean “unread.” Some email apps block images, protect activity, or open content automatically. Security tools can also visit links. Scouty excludes recognized automated activity and uncertain signals from estimated opens and clicks, but cannot identify every automated visit.
 </Info>
 
+## Read the activity notes
+
+The short note explains that open and click estimates exclude automated and uncertain activity. Only nonzero counts appear as **Automated**, **Uncertain**, **Incomplete data**, or **Unclassified bounces**. These groups may overlap; do not add them together as a total.
+
+Open **How these metrics work** for the per-email counting rule, recipient delivery caveat, and soft-bounce explanation. Unclassified bounces are excluded from soft/hard bounce counts.
+
 ## Tracking happens automatically
 
-New opening emails, follow-ups, replies, and forwards include tracking automatically. There is no setting to enable. You still review and approve the message before sending.
+New opening emails, follow-ups, replies, and forwards include tracking automatically. There is no setting to enable. Manual sends still require your confirmation. Automated sends follow the settings and authorization for the campaign.
 
 Emails sent before tracking was available show **Not tracked**. Scouty does not reconstruct their earlier activity. Plain-text emails can record link clicks but not opens. Unsubscribe links and other excluded links are not tracked.
 

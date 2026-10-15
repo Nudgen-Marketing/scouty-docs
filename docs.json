@@ -3,26 +3,85 @@
   "theme": "mint",
   "name": "Scouty",
   "description": "Find better-fit prospects, write personal outreach, and turn replies into meetings.",
-  "colors": { "primary": "#2563EB", "light": "#3B82F6", "dark": "#3B82F6" },
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#3B82F6"
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
-      { "group": "Get started", "pages": ["index", "quickstart", "getting-started/accounts-and-projects"] },
-      { "group": "Find prospects", "pages": ["find-prospects/research-your-company", "find-prospects/campaigns-and-targeting", "find-prospects/companies-and-contacts"] },
-      { "group": "Send and manage email", "pages": ["email/drafts-and-sending", "email/conversations", "email/auto-follow-up", "email/analytics"] },
-      { "group": "Meetings", "pages": ["meetings/google-calendar"] },
-      { "group": "Custom domain", "pages": ["settings/custom-domain"] },
-      { "group": "Limits and troubleshooting", "pages": ["help/limits-and-troubleshooting"] }
+      {
+        "group": "Get started",
+        "pages": [
+          "index",
+          "quickstart",
+          "getting-started/accounts-and-projects"
+        ]
+      },
+      {
+        "group": "Find prospects",
+        "pages": [
+          "find-prospects/research-your-company",
+          "find-prospects/campaigns-and-targeting",
+          "find-prospects/companies-and-contacts",
+          "find-prospects/auto-gtm"
+        ]
+      },
+      {
+        "group": "Send and manage email",
+        "pages": [
+          "email/drafts-and-sending",
+          "email/conversations",
+          "email/auto-follow-up",
+          "email/analytics"
+        ]
+      },
+      {
+        "group": "Meetings",
+        "pages": [
+          "meetings/google-calendar"
+        ]
+      },
+      {
+        "group": "Account settings",
+        "pages": [
+          "settings/custom-domain",
+          "settings/connected-apps"
+        ]
+      },
+      {
+        "group": "Limits and troubleshooting",
+        "pages": [
+          "help/limits-and-troubleshooting"
+        ]
+      }
     ],
     "global": {
       "anchors": [
-        { "anchor": "Open Scouty", "href": "https://scouty.to/", "icon": "arrow-up-right-from-square" }
+        {
+          "anchor": "Open Scouty",
+          "href": "https://scouty.to/",
+          "icon": "arrow-up-right-from-square"
+        }
       ]
     }
   },
-  "logo": { "light": "/logo/light.svg", "dark": "/logo/dark.svg" },
-  "navbar": {
-    "primary": { "type": "button", "label": "Open Scouty", "href": "https://scouty.to/" }
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
-  "contextual": { "options": ["copy", "view"] }
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Open Scouty",
+      "href": "https://scouty.to/"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view"
+    ]
+  }
 }
