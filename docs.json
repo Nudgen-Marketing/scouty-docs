@@ -51,6 +51,12 @@
         ]
       },
       {
+        "group": "Affiliate program",
+        "pages": [
+          "affiliates"
+        ]
+      },
+      {
         "group": "Limits and troubleshooting",
         "pages": [
           "help/limits-and-troubleshooting"
