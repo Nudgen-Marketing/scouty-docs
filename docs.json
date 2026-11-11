@@ -51,6 +51,12 @@
         ]
       },
       {
+        "group": "Affiliate program",
+        "pages": [
+          "affiliates"
+        ]
+      },
+      {
         "group": "Limits and troubleshooting",
         "pages": [
           "help/limits-and-troubleshooting"
@@ -82,6 +88,31 @@
     "options": [
       "copy",
       "view"
+    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "header": "Scouty by Nudgen LLC",
+        "items": [
+          {
+            "label": "Nudgen LLC",
+            "href": "/index#business-details"
+          },
+          {
+            "label": "Contact support",
+            "href": "mailto:contact@scouty.to"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://scouty.to/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://scouty.to/privacy"
+          }
+        ]
+      }
     ]
   }
 }
