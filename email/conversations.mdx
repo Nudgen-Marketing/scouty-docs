@@ -1,41 +1,60 @@
 ---
-title: "Conversations and replies"
-description: "Monitor sent outreach, check replies, draft responses, and understand project activity."
+title: "Mailbox, conversations, and replies"
+sidebarTitle: "Mailbox and replies"
+description: "Work through replies, drafts, and sent email for the whole workspace in one mailbox."
 ---
 
-Every sent email remains attached to its project. Open the Dashboard, choose a project, and use the email list to search or filter conversations.
+The **Mailbox** in the Dashboard sidebar holds every email for the workspace, across all campaigns. Everyone in the workspace shares it.
 
-The project also lists saved campaigns. Use **Open campaign** to resume research or **Add campaign** for a new audience within the same site. Sending and Calendar stay on the Dashboard.
+| Folder | What it holds |
+| --- | --- |
+| **Inbox** | Conversations with replies. Review prepared replies, make them yours, then send. The count shows conversations that need a reply. |
+| **Drafts** | First-email drafts waiting for review. |
+| **Sent** | Sent conversations and their delivery status. |
 
-## Project overview
+The Dashboard opens on **Inbox**.
 
-The project shows sent and replied totals, reply rate, meetings, items that need attention, upcoming meetings, and recent conversation activity. Delivery and meeting changes can arrive after the initial send.
+## Find a conversation
 
-Select **Check for replies** when you want the latest conversation status. Scouty also updates the conversation when new activity becomes available.
+- Search by person, company, or subject.
+- Use **Filter by campaign** to show one campaign. The default is **All campaigns**.
+- Sort by **Latest activity**, **Latest reply**, or **Oldest first**.
+- In **Inbox**, filter with **Needs reply**, **All emails**, **Needs attention**, or **Reply received**.
+
+Select **Check for replies** when you want the latest status. Scouty also updates conversations as new activity arrives.
 
 ## Read a conversation
 
-Open an email to see:
+Select an email to open it beside the list. You see:
 
 - the opening email and its delivery status;
 - incoming replies in time order;
 - the **From**, **To**, and **Cc** recipients on each message;
-- approved automatic follow-ups that were sent;
-- scheduling activity and meeting status;
-- the current follow-up state and stop reason.
+- automatic follow-ups that were sent, and the follow-up status;
+- scheduling activity and meeting status.
 
-A reply from the prospect or a Cc participant stops automatic follow-up for safety. A Cc reply does not increase the prospect reply count or start meeting booking. A reply labeled as out-of-office also stops the sequence.
+A reply from the prospect or a Cc participant stops automatic follow-up. A Cc reply does not increase the prospect reply count or start meeting booking. An out-of-office reply also stops the sequence.
+
+Select **Mark as done** when a conversation needs nothing more. Select **Reopen** to bring it back.
+
+## Read replies in another language
+
+Scouty writes each opening email in the language the recipient most likely reads. When a conversation is not in English, use **Show in English** to read a translation and **Show original** to switch back. Translated messages are labeled **Translated from** and the language. Long messages may be shortened in translation.
+
+Under an AI reply draft in another language, Scouty shows an English translation for you. The original text is what is sent.
 
 ## Reply from Scouty
 
-Scouty can draft a reply from the latest conversation context. The generated reply remains in the editor for your review.
+When a prospect replies, Scouty prepares a suggested reply for your review. Suggested replies are not sent automatically.
 
 1. Open the conversation and choose a message.
 2. Select **Reply** to answer only its sender, or **Reply all** to include the other To and Cc participants. Scouty removes your own sending address and duplicate recipients.
-3. Review and edit To, Cc, and the message. Select **Add Cc** if needed. Paste multiple addresses separated by commas, semicolons, or line breaks. The limit is ten people across To and Cc. You can also use the AI draft action for the selected message.
+3. Review and edit To, Cc, and the message. Select **Add Cc** if needed. Paste multiple addresses separated by commas, semicolons, or line breaks. The limit is ten people across To and Cc. Use **Draft with AI** to write a reply to the selected message.
 4. Select **Send reply** only when the content and recipients are ready.
 
-Scouty does not automatically send these conversation replies. Closing the panel during the current page visit preserves an unsent reply for that conversation, but you should send or copy important work before leaving the page.
+A suggested reply can include the campaign's [link for replies](/email/writing-prompt#link-for-replies) or your [meeting setup](/meetings/google-calendar) when it fits what the lead wrote. Replies are free. See [Billing & Usage](/settings/billing).
+
+Closing the panel during the current page visit preserves an unsent reply for that conversation, but send or copy important work before leaving the page.
 
 ## Forward one email
 
@@ -48,21 +67,21 @@ Use **Forward** on an individual message when an owner, manager, or colleague ne
 
 If an attachment cannot be loaded, Scouty asks you to review the forward and remove that file before sending. A forward appears separately in the conversation. It does not count as prospect activity and does not stop the prospect's automatic follow-up sequence. Replies in this private exchange stay separate from the prospect conversation.
 
-If a message shows **Sending** or **Delivery not confirmed**, select **Check status**. You can close and reopen the conversation to check later. Do not create a replacement send while confirmation is pending. **Sent** confirms the send; it does not guarantee that the recipient has read the message.
+If a message shows **Sending…** or **Delivery not confirmed**, select **Check status**. You can close and reopen the conversation to check later. Do not create a replacement send while confirmation is pending. **Sent** confirms the send. It does not guarantee that the recipient has read the message.
 
 If your sending address or the original email changes before you send, review the updated message again. Use **Refresh preview** when forwarding.
 
 ## When a conversation needs attention
 
-Use **Needs you** when Scouty could not safely complete an action. Examples include a proposed time that needs review, a drafted scheduling response, or an uncertain send result.
+Use the **Needs attention** filter, and look for **Needs you**, when Scouty could not safely complete an action. Examples include a proposed time that needs review, a drafted scheduling response, or an uncertain send result.
 
 If a prospect is not interested, asks you to stop, bounces, or is already handled, stop further outreach and follow the status shown in the conversation. A stop request must always be honored.
 
 <CardGroup cols={2}>
   <Card title="Auto follow-up" icon="clock-rotate-left" href="/email/auto-follow-up">
-    Approve up to three scheduled messages for future opening emails.
+    Send up to three automatic follow-ups when there is no reply.
   </Card>
-  <Card title="Google Calendar" icon="calendar" href="/meetings/google-calendar">
-    Turn an interested reply into a reviewed or automatic booking.
+  <Card title="Meeting setup" icon="calendar" href="/meetings/google-calendar">
+    Turn an interested reply into a booked meeting.
   </Card>
 </CardGroup>

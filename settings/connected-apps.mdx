@@ -1,12 +1,44 @@
 ---
 title: "Connected Apps"
-description: "Review and revoke applications that can act on your Scouty account."
+description: "Review and revoke the AI apps that can use Scouty on your behalf."
 ---
 
-Open **Connected Apps** in the Dashboard sidebar to review applications authorized to use Scouty on your behalf.
+**Connected Apps** lists the apps authorized to use this workspace through Scouty's MCP server, such as ChatGPT, Claude, or Codex. Use it to connect an app, check what it can do, and revoke access.
 
-Review the access shown for each connected application. Revoke access when you no longer want it to make requests for your account. Select **Revoke access** for the application you want to disconnect.
+Open **Settings → Connected Apps**.
 
-Revoking access blocks future requests. It does not undo actions already taken, recall email, or cancel existing meetings. It does not replace the controls for [Auto GTM](/find-prospects/auto-gtm) or the site's [Google Calendar connection](/meetings/google-calendar).
+## Review a connected app
 
-If the page cannot load, use **Try again**. If revocation fails, check the current connection status before assuming access has been removed. Connect the application again through its authorization flow if you later want to use it.
+Each app shows:
+
+| Field | Meaning |
+| --- | --- |
+| **Permissions** | What the app can read or do. See [permissions](/ai-apps/tools-and-permissions#permissions). |
+| **Connected** | When access was approved. |
+| **Last used** | The app's most recent request, or **Not used yet**. |
+
+Owners and admins see every app connected to the workspace. Members see only apps they connected themselves.
+
+The list is for the workspace you have open. Switch workspaces to review apps connected to another one.
+
+## Connect an app
+
+The page shows the **Server URL** and steps for ChatGPT, Claude, Codex, and other apps under **Connect an app**. Only a workspace owner or admin can approve a connection. Follow [Connect an AI app](/ai-apps/connect).
+
+## Revoke access
+
+Select **Revoke access** for the app you want to disconnect. Scouty confirms with "Access revoked for" and the app's name, and removes it from the list.
+
+<Warning>
+  Revoking access blocks future requests immediately. It does not undo actions already taken, recall email, or cancel existing meetings.
+</Warning>
+
+Revoking an app does not pause [campaign automation](/find-prospects/campaign-automation), stop scheduled [follow-ups](/email/auto-follow-up), or disconnect the site's [Google Calendar](/meetings/google-calendar). Change those in their own settings.
+
+To use the app again later, connect it again and approve its permissions.
+
+## If something goes wrong
+
+- The page cannot load: select **Try again**.
+- Revoking fails: reload the page and check whether the app is still listed before assuming access was removed.
+- An app you do not recognize is listed: revoke it, then review recent drafts, sent email, and meetings in the Dashboard.

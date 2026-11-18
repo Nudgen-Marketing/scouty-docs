@@ -1,0 +1,156 @@
+---
+title: "Tools and permissions"
+description: "What a connected AI app can read and do in Scouty, and the safeguards around sending."
+keywords: ["MCP tools", "permissions", "scopes", "idempotency"]
+---
+
+A connected app works through tools. Each tool needs one permission, and you approve permissions in Scouty. The app can only use tools covered by the permissions you approved, in the workspace you chose.
+
+## Permissions
+
+| Permission | What it allows |
+| --- | --- |
+| **Read workspace** | Read your campaigns, conversations, and account information. Every new connection starts with this. |
+| **Research businesses** | Run business research and competitor discovery, and search for companies and decision makers, using your allowance. |
+| **Reveal contacts** | Reveal contact details using your allowance. |
+| **Manage campaigns** | Create and update your projects, research, and campaigns. |
+| **Draft outreach** | Generate and edit outreach drafts. Does not send. |
+| **Send messages** | Send, reply, and forward messages without asking Scouty again for each message. |
+| **Automate follow-ups** | Configure automatic follow-up messages without asking Scouty again for each send. |
+| **Manage meetings** | Read calendar availability and book meetings. |
+
+Ask the app for the smallest set of permissions your task needs. You can see what each connected app holds in [Connected Apps](/settings/connected-apps).
+
+<Info>
+  Your workspace role still applies. For example, only an owner or admin can confirm the workspace website, whatever the app was granted.
+</Info>
+
+## Tools
+
+Tool names appear in your AI app when it asks you to confirm an action.
+
+<AccordionGroup>
+  <Accordion title="Read workspace">
+    | Tool | What it does |
+    | --- | --- |
+    | `list_projects` | Lists your projects and their meeting settings. |
+    | `list_research` | Lists your saved business research. |
+    | `list_campaigns` | Lists saved campaigns. |
+    | `get_campaign` | Reads one campaign and its targeting. |
+    | `get_campaign_writing_prompt` | Reads the campaign's writing prompt. |
+    | `get_campaign_reply_link` | Reads the campaign's reply link and note. |
+    | `outreach_list` | Lists outreach with draft content, delivery status, and meeting status. |
+    | `outreach_get` | Reads one draft's sender, recipients, subject, and message before sending. |
+    | `conversation_thread` | Reads the messages in a conversation. It does not mark replies as read. |
+    | `conversation_forward_preview` | Shows the message and attachment choices before a forward. |
+    | `conversation_activity` | Lists scheduling activity for an outreach. |
+    | `followups_get` | Reads a follow-up sequence, its messages, and approval status. |
+  </Accordion>
+  <Accordion title="Research businesses">
+    | Tool | What it does |
+    | --- | --- |
+    | `research_business` | Researches a public business website and saves the research. It does not confirm the website. |
+    | `research_business_brief` | Researches a business from a description when there is no website. |
+    | `find_competitors` | Finds competitors for your saved research. The target market must be set first. |
+    | `suggest_campaigns` | Suggests campaigns from your research and competitors. |
+    | `find_leads` | Finds one page of companies for a campaign. Dismissed and already-contacted companies are left out. |
+    | `find_decision_makers` | Finds decision makers at a company in the campaign's results. |
+  </Accordion>
+  <Accordion title="Reveal contacts">
+    | Tool | What it does |
+    | --- | --- |
+    | `reveal_contact` | Reveals contact details for a listed decision maker in your campaign. |
+  </Accordion>
+  <Accordion title="Manage campaigns">
+    | Tool | What it does |
+    | --- | --- |
+    | `edit_research` | Saves corrections to your business profile. Clears competitor research and campaign suggestions built on the old profile. |
+    | `edit_competitors` | Replaces the competitor list, up to ten companies. Clears campaign suggestions built on the old list. |
+    | `confirm_website` | Permanently confirms the reviewed website for your workspace. Owners and admins only. |
+    | `create_campaign` | Creates one campaign from a suggestion and starts its automation. |
+    | `update_campaign` | Changes campaign targeting. Automation follows the new targeting. |
+    | `update_campaign_writing_prompt` | Replaces the campaign's writing prompt. |
+    | `update_campaign_reply_link` | Sets or clears the campaign's reply link and note. |
+    | `set_lead_feedback` | Dismisses or restores a company or person for a campaign. |
+    | `conversation_done` | Marks a conversation as handled, or reopens it. |
+  </Accordion>
+  <Accordion title="Draft outreach">
+    | Tool | What it does |
+    | --- | --- |
+    | `outreach_draft_create` | Creates a personal draft for a revealed contact in your campaign. |
+    | `outreach_draft_update` | Saves exact subject, message, and Cc edits to an unsent draft. |
+    | `outreach_draft_rewrite` | Rewrites an unsent draft from an instruction. |
+    | `conversation_reply_draft` | Drafts a reply to a specific message. |
+  </Accordion>
+  <Accordion title="Send messages">
+    | Tool | What it does |
+    | --- | --- |
+    | `outreach_send` | Sends a reviewed draft. |
+    | `conversation_reply` | Sends an exact reply to a specific message. |
+    | `conversation_forward` | Forwards a reviewed message to up to ten recipients you name. |
+  </Accordion>
+  <Accordion title="Automate follow-ups">
+    | Tool | What it does |
+    | --- | --- |
+    | `followups_configure` | Turns automatic follow-ups on or off for a project and sets its time zone. Turning them on applies to every email sent afterward. Turning them off stops every existing sequence in the project. |
+    | `followups_update` | Generates, saves, approves, or stops the follow-up sequence for one unsent outreach. Optional: without it, sending prepares the sequence automatically. |
+  </Accordion>
+  <Accordion title="Manage meetings">
+    | Tool | What it does |
+    | --- | --- |
+    | `calendar_connection` | Reads the project's calendar status and returns the Scouty link for connecting Google Calendar. |
+    | `calendar_availability` | Reads busy times on the connected calendar for up to seven days. It returns times only, not event titles or attendees. |
+    | `meeting_book` | Books a meeting for a sent outreach at a time you give. Returns other times if you are busy. |
+  </Accordion>
+</AccordionGroup>
+
+## Actions with lasting effects
+
+<Warning>
+  These actions cannot be undone from the app. Ask the app to show you the details and confirm before it runs them.
+</Warning>
+
+- **Confirming a website** permanently links the workspace to that website. Another website cannot replace it. Researching a website does not confirm it.
+- **Creating a campaign** starts automatic research and sending for that campaign once the mailbox is ready. There is no per-campaign cap on emails, and sent email is billed to the workspace. If your workspace is set to drafts only, automation prepares drafts until an owner or admin allows automatic sending in Scouty. An app cannot change that setting. See [campaign automation](/find-prospects/campaign-automation).
+- **Sending, replying, and forwarding** deliver real email that cannot be recalled.
+- **Turning on follow-ups** authorizes Scouty to write and send up to three follow-ups for every email sent afterward, with no separate approval. See [Auto follow-up](/email/auto-follow-up).
+- **Booking a meeting** creates a calendar event and sends an invitation.
+
+## Safeguards around sending
+
+Scouty applies the same rules to an app as to you in the Dashboard.
+
+- **Reviewed drafts only.** The app sends a draft by the version it last read. If the draft changed since, Scouty rejects the send and the app must read it again.
+- **No free-typed recipients for outreach.** Opening emails, replies, and bookings use the recipients saved on the outreach. The app cannot substitute an email address. Forwards are the exception: you name their recipients.
+- **No duplicate sends.** If the result of a send or booking is unknown, Scouty will not run it again. Check the email or meeting in Scouty before you ask the app to do anything further.
+- **Follow-ups match the reviewed email.** A follow-up sequence belongs to the opening email as it was read. Editing that email afterward means the app must prepare the sequence again.
+- **Calendar sign-in stays in the browser.** An app cannot connect Google Calendar for you. It gives you the Scouty link to finish in your browser. See [Google Calendar and meetings](/meetings/google-calendar).
+- **Meeting times are checked.** A meeting must start at least 10 minutes from now and within 90 days, and its length must match the project's **Meeting length**.
+
+## What an app cannot do
+
+- Work in a workspace other than the one you approved.
+- Manage people, billing, notification settings, or a custom domain.
+- Connect or disconnect Google Calendar.
+- Allow automatic sending for a workspace that is set to drafts only.
+- Save a campaign you described yourself in Scouty. Apps create campaigns from suggestions.
+- Bypass a usage limit.
+
+## When a tool fails
+
+Your AI app shows Scouty's message. These are the common ones.
+
+| Message is about | Meaning | What to do |
+| --- | --- | --- |
+| A missing permission | The connection does not include the permission the tool needs. | Approve it in Scouty when the app asks, or reconnect. |
+| Your workspace role | Your role does not allow the action. | Ask an owner or admin. |
+| Invalid tool arguments | The app used out-of-date tool definitions. | Ask the app to refresh Scouty's tools and read the item again. |
+| A usage limit | An allowance is used up. The message includes when to retry. | Wait until that time. See [limits](/help/limits-and-troubleshooting). |
+| A changed draft or campaign | Someone edited it after the app read it. | Ask the app to read the latest version, then review it again. |
+| An action in progress or unknown outcome | Scouty could not confirm a send or booking. | Check its status in Scouty. Do not retry it. |
+| A result that is too large | The action finished but the result could not be returned. | Ask for a smaller page or open Scouty. Do not repeat the action. |
+| Scouty temporarily unavailable | A temporary problem. | For anything that sends or books, check its status in Scouty before retrying. |
+
+<Card title="Connect an AI app" icon="plug" href="/ai-apps/connect">
+  Add Scouty to ChatGPT, Claude, Codex, or another MCP app.
+</Card>

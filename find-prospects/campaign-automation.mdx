@@ -1,0 +1,105 @@
+---
+title: "Campaign automation"
+description: "Understand what a saved campaign does on its own, and how to schedule, pause, and monitor it."
+---
+
+A saved campaign runs on its own. It keeps finding companies and contacts, writes a personal email for each contact, and sends it. There is no separate start button.
+
+<Warning>
+  Saving a campaign starts automatic research and sending once your sending mailbox is ready. Review the audience, the email previews, and your [writing prompt](/email/writing-prompt) before you save.
+</Warning>
+
+## What starts when you save
+
+1. Scouty searches for companies that match the campaign's targeting.
+2. It finds up to five contacts per company and looks up email addresses when needed.
+3. It writes an opening email for each contact in automatic outreach.
+4. It sends each email during the campaign's sending hours.
+
+Sent email uses your trial credit, then pay-as-you-go. See [Billing & Usage](/settings/billing).
+
+If the workspace has no sending mailbox yet, Scouty asks an owner or admin to create one. The campaign starts when the mailbox is ready.
+
+## Open a campaign
+
+Select the campaign under **Campaigns** in the Dashboard sidebar. The campaign page has three tabs:
+
+| Tab | What it shows |
+| --- | --- |
+| **Campaign** | The audience, the [writing prompt](/email/writing-prompt), and the link for replies. |
+| **Leads** | Companies and people found for the campaign, with each person's progress. |
+| **Progress** | Research capacity, totals, and recent activity. |
+
+Use **Open research** to return to the research steps for the campaign, and **All campaigns** to go back to the site.
+
+## Read the status
+
+The campaign header shows **Auto-send** and a status.
+
+| Status | Meaning |
+| --- | --- |
+| **Starting**, **Processing**, **Scheduled** | Automation is working or has work queued. |
+| **Waiting for sending hours** | Emails are ready and will send in the next sending window. |
+| **Retrying**, **Delayed** | A step is being tried again. No action is needed yet. |
+| **Confirming sends** | Scouty is confirming recent sends before continuing. |
+| **Paused** | Someone paused the campaign. Select **Resume** to continue. |
+| **Resume required** | The campaign is ready to continue after a change. Select **Resume**. |
+| **Waiting for billing** | Sending needs trial credit or a payment method. See [Billing & Usage](/settings/billing). |
+| **Needs attention** | Automation stopped on a problem. Read the reason on the **Progress** tab. |
+| **Off (drafts only)** | The workspace prepares drafts and does not send automatically. |
+| **Not running** | Nothing is scheduled for the campaign. |
+
+The **Progress** tab's **Activity** list explains what happened and when work resumes. When a daily research limit is reached, the message gives the time and time zone at which it continues. Contacts already queued keep moving.
+
+## Set sending hours
+
+Open **Sending schedule** on the campaign page. An owner or admin can change it.
+
+1. Tick the days email may be sent. Choose at least one.
+2. Enter the **Timezone**.
+3. Choose **Send from** and **Send until**. The end must be later than the start.
+4. Select **Save schedule**.
+
+The schedule applies to new emails and follow-ups. Research may continue outside these hours. A new campaign can send on any day at any hour until you change this.
+
+## Pause and resume
+
+Select **Pause** in the campaign header to stop new work. An action already underway may still finish. Select **Resume** to continue.
+
+Pausing one campaign does not pause the site's other campaigns. To stop all billable sending for the workspace, the owner can use **Stop paid sending** in [Billing & Usage](/settings/billing).
+
+## Who automation contacts
+
+On **Leads → People**, **Match** shows how each person fits the campaign.
+
+| Match | Automatic outreach |
+| --- | --- |
+| **Buyer persona** | Included. |
+| **Related role** or **Other senior** | Shown as **Not in automatic outreach**. Add their job title in **Edit targeting** to include that role. |
+
+**Progress** shows where each person is: **Contact found**, **Review draft**, **View conversation**, or **Reply received**. **May have left this company** warns you to check the person before contacting them.
+
+<Note>
+  The **Social** and **Phone** columns show a starred-out placeholder. Scouty does not reveal social profiles or phone numbers.
+</Note>
+
+## Drafts-only workspaces
+
+Scouty can set a workspace to prepare drafts without sending. The campaign then shows "Automatic sending is off for this workspace."
+
+An owner or admin can change this on the site page under **Site settings → Automatic sending**:
+
+- **Allow automatic sending** turns sending on. Drafts Scouty already prepared that nobody edited are sent too. Edited drafts stay for you to review.
+- **Turn off automatic sending** returns to drafts only.
+
+While sending is off, review and send drafts yourself from **Drafts** in the sidebar. See [draft and send email](/email/drafts-and-sending).
+
+## Archived sites
+
+Archived sites are read-only and their automation stops. After you restore a site, automation stays off. Open each campaign and select **Resume** when you want it to continue.
+
+## Related settings
+
+- [Auto follow-up](/email/auto-follow-up) sends up to three follow-ups when there is no reply. It is a site setting.
+- [Meeting setup](/meetings/google-calendar) controls how prospects book time with you.
+- [Knowledge](/find-prospects/knowledge) gives Scouty facts and writing preferences for every campaign.

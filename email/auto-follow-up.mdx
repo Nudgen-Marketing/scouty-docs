@@ -1,45 +1,45 @@
 ---
 title: "Auto follow-up"
-description: "Prepare and approve up to three follow-ups that stop when the conversation changes."
+description: "Send up to three automatic follow-ups that stop when the conversation changes."
 ---
 
-Auto follow-up helps you continue an approved conversation when the recipient has not replied. It is off by default for each project and applies only to opening emails sent after you enable it.
+Auto follow-up writes and sends up to three follow-ups when a recipient has not replied. It is off by default for each site and applies only to emails sent after you enable it.
 
-## Enable it for a project
+## Enable it for a site
 
 <Steps>
-  <Step title="Open Auto follow-up">
-    Open a project or its draft in **Write emails**. Find **Auto follow-up**.
+  <Step title="Open site settings">
+    Select your website in the Dashboard sidebar and find **Auto follow-up** under **Site settings**.
   </Step>
   <Step title="Choose the time zone">
-    Choose the project time zone, such as `Asia/Ho_Chi_Minh`. Scouty initially suggests your current time zone.
+    Enter the site's **Time zone**, such as `Asia/Ho_Chi_Minh`. Scouty suggests your current time zone. The time zone cannot be edited while follow-ups are on.
   </Step>
   <Step title="Enable follow-ups">
-    Select **Enable follow-ups** and confirm. Only new opening emails with an explicitly approved sequence can start automatic follow-up.
+    Select **Enable follow-ups** and confirm with **Enable**.
   </Step>
 </Steps>
 
-## Draft and approve the sequence
+New emails then receive AI-written follow-ups automatically when there is no reply. No further setup or approval is needed. Emails sent before you enabled the setting do not get follow-ups.
 
-1. Select **Draft 3 follow-ups with AI**.
-2. Review all three messages.
-3. Edit each message as needed, then select **Save follow-ups**.
-4. Select **Approve all 3 follow-ups** and confirm **Approve sequence**.
-5. Send the original opening email.
+A draft shows **Auto follow-up for this site: On** or **Off**, with **Change in site settings** to return to this setting.
 
-The sequence starts only after the original email is confirmed as sent. If you send the opening email without an approved sequence, Scouty does not schedule follow-ups for it later.
+<Info>
+  Follow-ups are sent email. Each one counts toward [billing](/settings/billing) like an opening email.
+</Info>
 
-Editing the original subject, body, or Cc list invalidates the previous approval. Save or regenerate the three messages and approve them again.
+## Edits to the opening email
+
+Follow-ups are written for the opening email as it was sent, and they use its Cc list. Finish editing the subject, message, and Cc before you send.
 
 ## Schedule rules
 
 - Scouty can send at most three follow-ups after the opening email.
 - Each message waits at least 72 hours after the previous confirmed send.
-- Messages send Monday through Friday between 09:00 and 17:00 in the project time zone.
+- Messages send Monday through Friday between 09:00 and 17:00 in the site time zone.
 - A due time outside that window moves to the next valid working time.
 - If sending was unavailable at the scheduled time, Scouty does not send several missed messages at once.
 
-The conversation displays **0/3** through **3/3 sent**, the next scheduled time, current status, approved content, and a reason when the sequence stops.
+The conversation displays **0/3** through **3/3 sent**, the next scheduled time, the current status, and a reason when the sequence stops.
 
 ## Conditions that stop the sequence
 
@@ -50,7 +50,7 @@ Scouty stops pending follow-ups when it detects any of these conditions:
 - a meeting booked for the conversation;
 - a manual email sent in the conversation;
 - the conversation marked handled;
-- auto follow-up turned off for the project;
+- auto follow-up turned off for the site;
 - the site archived;
 - **Stop follow-ups** selected for the sequence;
 - all three follow-ups sent.
@@ -63,8 +63,12 @@ If Scouty cannot confirm that it is safe to continue, it delays or stops the seq
 
 ## Turn it off or stop one sequence
 
-Select **Turn off follow-ups** to stop all pending sequences in the project. Turning it on again affects only new opening emails and does not restart old sequences.
+Select **Turn off follow-ups** in **Site settings** and confirm with **Turn off** to stop all pending sequences for the site. Turning it on again affects only new emails and does not restart old sequences.
 
 Select **Stop follow-ups** inside a conversation to stop only that sequence. It does not restart automatically.
 
-[Auto GTM](/find-prospects/auto-gtm) controls ongoing campaign prospecting and opening emails. It does not replace follow-up review and approval.
+## When the recipient replies
+
+Scouty stops the sequence, prepares a suggested reply for your review, and notifies you. The suggested reply is not sent automatically. See [conversations and replies](/email/conversations).
+
+[Campaign automation](/find-prospects/campaign-automation) controls prospecting and opening emails. Auto follow-up is a separate site setting.

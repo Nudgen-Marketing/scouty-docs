@@ -25,13 +25,15 @@
           "find-prospects/research-your-company",
           "find-prospects/campaigns-and-targeting",
           "find-prospects/companies-and-contacts",
-          "find-prospects/auto-gtm"
+          "find-prospects/campaign-automation",
+          "find-prospects/knowledge"
         ]
       },
       {
         "group": "Send and manage email",
         "pages": [
           "email/drafts-and-sending",
+          "email/writing-prompt",
           "email/conversations",
           "email/auto-follow-up",
           "email/analytics"
@@ -44,10 +46,20 @@
         ]
       },
       {
-        "group": "Account settings",
+        "group": "AI apps (MCP)",
         "pages": [
-          "settings/custom-domain",
-          "settings/connected-apps"
+          "ai-apps/connect",
+          "ai-apps/tools-and-permissions"
+        ]
+      },
+      {
+        "group": "Workspace settings",
+        "pages": [
+          "settings/people",
+          "settings/billing",
+          "settings/connected-apps",
+          "settings/notifications",
+          "settings/custom-domain"
         ]
       },
       {
@@ -73,6 +85,12 @@
       ]
     }
   },
+  "redirects": [
+    {
+      "source": "/find-prospects/auto-gtm",
+      "destination": "/find-prospects/campaign-automation"
+    }
+  ],
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"

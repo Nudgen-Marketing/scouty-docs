@@ -1,0 +1,180 @@
+---
+title: "Connect an AI app (MCP)"
+sidebarTitle: "Connect an AI app"
+description: "Let ChatGPT, Claude, Codex, or another MCP app research leads and run outreach in your Scouty workspace."
+keywords: ["MCP", "Model Context Protocol", "ChatGPT", "Claude", "Codex", "Claude Code", "connector", "OAuth"]
+---
+
+Scouty has a Model Context Protocol (MCP) server. Connect an AI app to it and you can ask that app to research a business, find leads, draft and send outreach, and book meetings in your workspace.
+
+Every app uses the same server URL and signs in with your Scouty account. There is no API key, client ID, or secret to copy.
+
+```text Server URL
+https://scouty.to/mcp
+```
+
+## Before you connect
+
+- You must be an **owner** or **admin** of the workspace. Members see a message asking an owner or admin to connect the app.
+- Your Scouty email address must be verified and the workspace's account setup must be finished.
+- A connection works in one workspace. To use the app in another workspace, connect again and choose that workspace.
+- The app uses your workspace's existing Scouty limits. Research, searches, and contact reveals made through the app count the same as in Scouty.
+
+## Connect your app
+
+You can copy the server URL and these steps from **Settings → Connected Apps** in Scouty.
+
+<Tabs>
+  <Tab title="ChatGPT">
+    <Steps>
+      <Step title="Open Plugins">
+        On the web, open [Plugins](https://chatgpt.com/plugins) in ChatGPT.
+      </Step>
+      <Step title="Add a custom server">
+        Select the plus button, then **Add custom MCP server**.
+      </Step>
+      <Step title="Enter the connection">
+        Name it **Scouty** and paste the server URL under **Connection**.
+      </Step>
+      <Step title="Choose OAuth">
+        Choose **OAuth** for authentication.
+      </Step>
+      <Step title="Create the plugin">
+        Tick **I understand and want to continue**, then select **Create as a plugin**.
+      </Step>
+      <Step title="Approve in Scouty">
+        Sign in to Scouty when the browser opens, check the workspace and permissions, then select **Allow access**.
+      </Step>
+      <Step title="Use Scouty in a chat">
+        In a new chat, type `@` and pick Scouty.
+      </Step>
+    </Steps>
+
+    <Note>
+      Custom MCP servers are added on ChatGPT web, not mobile. Business, Enterprise, and Edu workspaces may need an admin to add Scouty first. On Pro, ChatGPT only uses tools that read.
+    </Note>
+  </Tab>
+  <Tab title="Claude">
+    <Steps>
+      <Step title="Open Connectors">
+        Open [Customize → Connectors](https://claude.ai/customize/connectors) in Claude.
+      </Step>
+      <Step title="Add a custom connector">
+        Select **+ Add**, then **Add custom connector**.
+      </Step>
+      <Step title="Enter the connection">
+        Name it **Scouty**, paste the server URL, and select **Continue**.
+      </Step>
+      <Step title="Keep the detected sign-in settings">
+        Keep the sign-in settings Claude detects, then select **Add**.
+      </Step>
+      <Step title="Approve in Scouty">
+        Select **Connect**. Sign in to Scouty when the browser opens, check the workspace and permissions, then select **Allow access**.
+      </Step>
+      <Step title="Use Scouty in a chat">
+        Turn Scouty on from the tools menu and ask about your campaigns.
+      </Step>
+    </Steps>
+
+    <Note>
+      On Team and Enterprise plans, an owner adds Scouty once under **Organization settings → Connectors**. Each person then connects their own account from **Customize → Connectors**.
+    </Note>
+  </Tab>
+  <Tab title="Codex">
+    <Steps>
+      <Step title="Add Scouty">
+        Run this in a terminal:
+
+        ```bash
+        codex mcp add scouty --url https://scouty.to/mcp
+        ```
+      </Step>
+      <Step title="Sign in">
+        ```bash
+        codex mcp login scouty
+        ```
+      </Step>
+      <Step title="Approve in Scouty">
+        Sign in to Scouty when the browser opens, check the workspace and permissions, then select **Allow access**.
+      </Step>
+      <Step title="Use Scouty">
+        Start Codex and ask it to use Scouty.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Claude Code">
+    <Steps>
+      <Step title="Add Scouty">
+        Run this in a terminal:
+
+        ```bash
+        claude mcp add --transport http scouty https://scouty.to/mcp
+        ```
+      </Step>
+      <Step title="Sign in">
+        Run `/mcp` inside Claude Code and choose Scouty.
+      </Step>
+      <Step title="Approve in Scouty">
+        Sign in to Scouty when the browser opens, check the workspace and permissions, then select **Allow access**.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Other apps">
+    Add a remote MCP server that uses Streamable HTTP, with the server URL above. Choose OAuth if the app asks how to authenticate. Then sign in to Scouty when the browser opens, check the workspace and permissions, and select **Allow access**.
+  </Tab>
+</Tabs>
+
+## Approve the connection
+
+The app opens **Connect an app to Scouty** in your browser.
+
+1. Check **Signed in as**. Sign in with the account you want the app to act for.
+2. Choose the **Workspace**. The app only has access to this workspace.
+3. Read the requested permissions. Each one is described in [tools and permissions](/ai-apps/tools-and-permissions#permissions).
+4. Select **Allow access**, or **Deny** to cancel.
+
+Scouty emails you when an app is connected. If the request has expired, start connecting again from your app.
+
+<Warning>
+  Only approve an app you trust. If **Send messages** or **Automate follow-ups** is listed, the app can send email or enable automated follow-ups without asking Scouty to approve each action.
+</Warning>
+
+## What to expect
+
+- A new connection can only read. When you ask for research, drafts, or sending, the app asks you to approve that extra permission in Scouty first.
+- Approving sending lets the app send without asking Scouty again for each message. Your AI app may still ask you to confirm an action in the chat.
+- Creating a campaign through an app starts that campaign's automatic prospecting, the same as saving it in Scouty. See [campaign automation](/find-prospects/campaign-automation).
+- A connection lasts up to 30 days. After that, connect the app again.
+- Removing you from the workspace, or revoking access, stops the app's future requests.
+
+## Try it
+
+After connecting, ask in plain language. For example:
+
+- "List my Scouty campaigns and tell me which has the most replies."
+- "Research acme.example in Scouty and show me the company profile before doing anything else."
+- "Find companies for my Hanoi pharma campaign and show the first page."
+- "Draft a reply to the latest message from this lead, but do not send it."
+
+Ask the app to show a draft's sender, recipients, subject, and message before you tell it to send.
+
+## Review or revoke access
+
+Open **Settings → Connected Apps**. Each connected app shows its **Permissions**, when it was **Connected**, and when it was **Last used**. Select **Revoke access** to disconnect it. See [Connected Apps](/settings/connected-apps).
+
+## Troubleshooting
+
+| What you see | What to do |
+| --- | --- |
+| "You need to be a workspace owner or admin to connect an app." | Ask an owner or admin of the workspace to connect it. |
+| "Could not load this request. Reconnect from your app if it has expired." | Select **Try again**, or start the connection again from your app. |
+| The app says it needs a permission | Approve the permission when the app sends you to Scouty. If nothing opens, disconnect and connect again. |
+| "Your workspace role or app permissions no longer allow this action." | Your role changed or access was revoked. Ask an owner or admin, or reconnect. |
+| "Your Scouty account is not ready. Open Scouty to finish account setup." | Open Scouty and finish sender setup, then ask again. |
+| The app reports a usage limit | Wait until the retry time the app shows. A limit reached in an app is the same limit you see in Scouty. |
+| The app says an action is in progress or its outcome is unknown | Check the email or meeting in Scouty before doing anything else. Do not ask the app to send it again. |
+| The app stopped working after about a month | The connection expired. Connect the app again. |
+
+<Card title="Tools and permissions" icon="list-check" href="/ai-apps/tools-and-permissions">
+  See every permission and what a connected app can do with it.
+</Card>
